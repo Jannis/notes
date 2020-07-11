@@ -1,4 +1,4 @@
-# README
+# Public Notes by [Jannis Pohlmann](https://twitter.com/jannispohlmann)
 
 ## Software
 
