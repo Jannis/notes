@@ -1,4 +1,4 @@
-# HOWTO: Google Cloud HTTPS
+# Google Cloud HTTPS
 
 This howto summarizes, in a few code snippets, how to set up an HTTPS
 endpoint for a Kubernetes ingress on Google Cloud.
