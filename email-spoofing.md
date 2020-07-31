@@ -11,6 +11,6 @@ All of these are configured through DNS TXT records.
 
 Background information and Google Cloud setup instructions can be found here:
 
-- SPF: https://support.google.com/a/answer/33786
-- DKIM: https://support.google.com/a/answer/174124?
-- DMARC: https://support.google.com/a/answer/2466563
+- SPF: [https://support.google.com/a/answer/33786]
+- DKIM: [https://support.google.com/a/answer/174124]
+- DMARC: [https://support.google.com/a/answer/2466563]
