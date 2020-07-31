@@ -7,10 +7,11 @@ domain, and that should always be configured together.
 - DKIM
 - DMARC
 
-All of these are configured through DNS TXT records.
+All of these are configured through DNS TXT records. They are described in
+more detail [here](https://blog.ironbastion.com.au/email-impersonation-scams-phishing-what-your-staff-can-do/).
 
-Background information and Google Cloud setup instructions can be found here:
+Google Cloud setup instructions can be found here:
 
-- (SPF)[https://support.google.com/a/answer/33786]
-- (DKIM)[https://support.google.com/a/answer/174124]
-- (DMARC)[https://support.google.com/a/answer/2466563]
+- [SPF](https://support.google.com/a/answer/33786)
+- [DKIM](https://support.google.com/a/answer/174124)
+- [DMARC](https://support.google.com/a/answer/2466563)
