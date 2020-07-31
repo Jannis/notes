@@ -10,6 +10,9 @@ domain, and that should always be configured together.
 All of these are configured through DNS TXT records. They are described in
 more detail [here](https://blog.ironbastion.com.au/email-impersonation-scams-phishing-what-your-staff-can-do/).
 
+Whether a server properly configures these can be detected with a tool such
+as [MX Lookup](https://mxtoolbox.com/).
+
 Google Cloud setup instructions can be found here:
 
 - [SPF](https://support.google.com/a/answer/33786)
