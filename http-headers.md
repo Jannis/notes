@@ -8,10 +8,41 @@ The following headers should be rejected to avoid DoS attacks:
 - `via` (CVE unknown)
 - `x_proxy_id` (CVE unknown)
 
+### Using Express (JS)
+
+An easy way to reject the above headers in Express JS applications is by
+adding a small middleware that rejects requests with the headers present:
+
+```js
+// Define the middleware
+const rejectBadHeaders = async (req: Request, res: Response, next: any) => {
+  if (
+    req.headers["challenge-bypass-token"] ||
+    req.headers["x_proxy_id"] ||
+    // Note: This one doesn't work on Google Cloud:
+    req.headers["via"]
+  ) {
+    return res.status(400).send("Bad Request");
+  } else {
+    next();
+  }
+};
+
+// Use it in the Express app
+app.use(rejectBadHeaders)
+
+// Or use it on specific routes
+app.get('/some-route', rejectBadHeaders, (req, res, next) => {
+  ...
+})
+```
+
+### Using NGINX
+
 An easy way to do this with NGINX is to reject requests that have these
 headers set by adding the following to `nginx.conf` under `http > server`:
 
-```NGINX
+```nginx
 http {
   server {
     # Rejection flag
